@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iCd-u1-k4z">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="DSy-c3-qNU">
+            <objects>
+                <viewController id="iCd-u1-k4z" customClass="SettingsViewController" customModule="InstaClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kmZ-gw-pHN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57N-2K-JMl">
+                                <rect key="frame" x="104" y="434" width="184" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="GFd-8u-211"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutClick:" destination="iCd-u1-k4z" eventType="touchUpInside" id="9wW-cf-P2b"/>
+                                    <segue destination="2kA-kn-EZ7" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" id="MVz-VW-dLI"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.portrait.and.arrow.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gqu-Ye-pl8">
+                                <rect key="frame" x="90" y="356.33333333333331" width="240" height="35"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4jM-EG-SKa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="57N-2K-JMl" firstAttribute="leading" secondItem="4jM-EG-SKa" secondAttribute="leading" constant="104" id="KRr-Dr-FnD"/>
+                            <constraint firstItem="Gqu-Ye-pl8" firstAttribute="top" secondItem="4jM-EG-SKa" secondAttribute="top" constant="296.99999999999994" id="ay5-m0-uMx"/>
+                            <constraint firstItem="57N-2K-JMl" firstAttribute="centerX" secondItem="kmZ-gw-pHN" secondAttribute="centerX" id="dYP-9f-MSL"/>
+                            <constraint firstItem="57N-2K-JMl" firstAttribute="top" secondItem="Gqu-Ye-pl8" secondAttribute="bottom" constant="8.6666666666667425" id="id2-xN-fPV"/>
+                            <constraint firstItem="Gqu-Ye-pl8" firstAttribute="leading" secondItem="4jM-EG-SKa" secondAttribute="leading" constant="90" id="pIm-Vh-gsb"/>
+                            <constraint firstItem="4jM-EG-SKa" firstAttribute="bottom" secondItem="57N-2K-JMl" secondAttribute="bottom" constant="286" id="qnB-qb-kyN"/>
+                            <constraint firstItem="4jM-EG-SKa" firstAttribute="trailing" secondItem="Gqu-Ye-pl8" secondAttribute="trailing" constant="63" id="yG9-x3-PXh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="LP4-AQ-6r9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6H1-B8-m5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-851.14503816793888" y="1084.5070422535211"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="1Ti-Q0-G80">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="2kA-kn-EZ7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XgH-Hl-iFi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3S2-ID-po7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265" y="1086"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="rectangle.portrait.and.arrow.forward" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

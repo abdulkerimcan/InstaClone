@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TBD-D5-AHW">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Upload-->
+        <scene sceneID="MG4-0d-dzf">
+            <objects>
+                <viewController id="TBD-D5-AHW" customClass="UploadViewController" customModule="InstaClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qpk-KT-9rA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="select" translatesAutoresizingMaskIntoConstraints="NO" id="kcq-e4-9Wi">
+                                <rect key="frame" x="69" y="81" width="254" height="283"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cso-sT-Hbv">
+                                <rect key="frame" x="134" y="488" width="124" height="60"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadClick:" destination="TBD-D5-AHW" eventType="touchUpInside" id="sBT-C1-P6z"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPr-Fc-etY">
+                                <rect key="frame" x="71" y="409" width="251" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zym-us-IV9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hPr-Fc-etY" firstAttribute="top" secondItem="kcq-e4-9Wi" secondAttribute="bottom" constant="45" id="4pe-Mx-1SS"/>
+                            <constraint firstItem="zym-us-IV9" firstAttribute="bottom" secondItem="cso-sT-Hbv" secondAttribute="bottom" constant="255" id="GPW-br-7WY"/>
+                            <constraint firstItem="cso-sT-Hbv" firstAttribute="leading" secondItem="zym-us-IV9" secondAttribute="leading" constant="134" id="OQl-AK-l5E"/>
+                            <constraint firstItem="hPr-Fc-etY" firstAttribute="leading" secondItem="zym-us-IV9" secondAttribute="leading" constant="71" id="Y09-R0-pEX"/>
+                            <constraint firstItem="kcq-e4-9Wi" firstAttribute="leading" secondItem="zym-us-IV9" secondAttribute="leading" constant="69" id="YX8-mt-8y6"/>
+                            <constraint firstItem="hPr-Fc-etY" firstAttribute="centerX" secondItem="cso-sT-Hbv" secondAttribute="centerX" id="cdh-E9-Un2"/>
+                            <constraint firstItem="hPr-Fc-etY" firstAttribute="centerY" secondItem="qpk-KT-9rA" secondAttribute="centerY" id="efM-cw-txE"/>
+                            <constraint firstItem="kcq-e4-9Wi" firstAttribute="centerX" secondItem="qpk-KT-9rA" secondAttribute="centerX" id="msP-rm-coV"/>
+                            <constraint firstItem="cso-sT-Hbv" firstAttribute="top" secondItem="hPr-Fc-etY" secondAttribute="bottom" constant="45" id="pcd-Mm-v99"/>
+                            <constraint firstItem="kcq-e4-9Wi" firstAttribute="top" secondItem="zym-us-IV9" secondAttribute="top" constant="81" id="vIT-G1-Bod"/>
+                            <constraint firstItem="kcq-e4-9Wi" firstAttribute="centerX" secondItem="hPr-Fc-etY" secondAttribute="centerX" id="vRE-P5-HAe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload" image="photo" catalog="system" id="9ye-q0-fMK"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="descText" destination="hPr-Fc-etY" id="ktJ-DZ-5F8"/>
+                        <outlet property="imageView" destination="kcq-e4-9Wi" id="ziZ-vu-j8P"/>
+                        <outlet property="uploadButton" destination="cso-sT-Hbv" id="FsB-63-QgP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83q-Je-J7X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633" y="369"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="select" width="264" height="300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

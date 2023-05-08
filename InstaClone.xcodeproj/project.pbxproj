@@ -24,6 +24,9 @@
 		0A528CF02A06874300B02FC1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0A528CEF2A06874300B02FC1 /* FirebaseDatabase */; };
 		0A528CF22A06874300B02FC1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0A528CF12A06874300B02FC1 /* FirebaseFirestore */; };
 		0A528CF42A06874300B02FC1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0A528CF32A06874300B02FC1 /* FirebaseStorage */; };
+		0AB2CAF32A09585B0072244C /* Upload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB2CAF22A09585B0072244C /* Upload.storyboard */; };
+		0AB2CAF52A0961040072244C /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB2CAF42A0961040072244C /* Feed.storyboard */; };
+		0AB2CAF72A09614B0072244C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB2CAF62A09614B0072244C /* Settings.storyboard */; };
 		0AE64A092A08F69A00FA4741 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0AE64A082A08F69A00FA4741 /* SDWebImage */; };
 		0AE64A0B2A08F69A00FA4741 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0AE64A0A2A08F69A00FA4741 /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
@@ -43,6 +46,9 @@
 		0A528CE02A06639700B02FC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A528CE22A06639700B02FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A528CE82A06654800B02FC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0AB2CAF22A09585B0072244C /* Upload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Upload.storyboard; sourceTree = "<group>"; };
+		0AB2CAF42A0961040072244C /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		0AB2CAF62A09614B0072244C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		0A528CD32A06639700B02FC1 /* InstaClone */ = {
 			isa = PBXGroup;
 			children = (
+				0AB2CAFA2A0970C70072244C /* Storyboards */,
 				0A520F402A0851FA0062D175 /* Post.swift */,
 				0A528CD42A06639700B02FC1 /* AppDelegate.swift */,
 				0A528CD62A06639700B02FC1 /* SceneDelegate.swift */,
@@ -90,13 +97,23 @@
 				0A520F3A2A07B76D0062D175 /* FeedViewController.swift */,
 				0A520F3C2A07B77D0062D175 /* UploadViewController.swift */,
 				0A520F3E2A083B710062D175 /* TableViewCell.swift */,
-				0A528CDA2A06639700B02FC1 /* Main.storyboard */,
 				0A528CDD2A06639700B02FC1 /* Assets.xcassets */,
 				0A528CDF2A06639700B02FC1 /* LaunchScreen.storyboard */,
 				0A528CE82A06654800B02FC1 /* GoogleService-Info.plist */,
 				0A528CE22A06639700B02FC1 /* Info.plist */,
 			);
 			path = InstaClone;
+			sourceTree = "<group>";
+		};
+		0AB2CAFA2A0970C70072244C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0A528CDA2A06639700B02FC1 /* Main.storyboard */,
+				0AB2CAF62A09614B0072244C /* Settings.storyboard */,
+				0AB2CAF42A0961040072244C /* Feed.storyboard */,
+				0AB2CAF22A09585B0072244C /* Upload.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,10 +187,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB2CAF32A09585B0072244C /* Upload.storyboard in Resources */,
 				0A528CE12A06639700B02FC1 /* LaunchScreen.storyboard in Resources */,
+				0AB2CAF52A0961040072244C /* Feed.storyboard in Resources */,
 				0A528CE92A06654800B02FC1 /* GoogleService-Info.plist in Resources */,
 				0A528CDE2A06639700B02FC1 /* Assets.xcassets in Resources */,
 				0A528CDC2A06639700B02FC1 /* Main.storyboard in Resources */,
+				0AB2CAF72A09614B0072244C /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
